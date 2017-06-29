@@ -38,7 +38,7 @@
   template:
     src: ntpd.conf.client.j2
     dest: "{{ ntpd_conf }}"
-    validate: "ansible-ntpd-checkconf %s"
+    #validate: "ansible-ntpd-checkconf %s"
   notify: Restart ntpd
   when: ntpd_role == 'client'
 
